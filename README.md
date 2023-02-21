@@ -1,5 +1,7 @@
 I worked on this project in 2019 with a group of three others. It is a game written in Java that we made for a class project.
 
+To run the program, first use terminal to navigate to "endless-doors/RPG/src" Then run "javac StartGame.java" Finally run "java StartGame"
+
 ---
 
 Greetings, reader of the README.md file. If you're here, you probably want to know more about the game Endless Doors.
