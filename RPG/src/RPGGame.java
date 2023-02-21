@@ -29,10 +29,10 @@ public class RPGGame implements KeyListener {
 	private FileWriter fW;
 
 	// these are all variables related to GUIs
-	private static Inventory i;
-	private HelpPage hP = new HelpPage();
-	private GameOver gO = new GameOver();
-	private TradingPost tP = new TradingPost();
+	private static InventoryGUI i;
+	private HelpPageGUI hP = new HelpPageGUI();
+	private GameOverGUI gO = new GameOverGUI();
+	private TradingPostGUI tP = new TradingPostGUI();
 
 	// these variables are all ArrayLists of other variables
 	private static ArrayList<String> keys = new ArrayList<String>();
@@ -95,7 +95,7 @@ public class RPGGame implements KeyListener {
 		return RPGGame.special;
 	}
 
-	public static Inventory getInventory() {
+	public static InventoryGUI getInventory() {
 		return i;
 	}
 
@@ -107,7 +107,7 @@ public class RPGGame implements KeyListener {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		i = new Inventory();
+		i = new InventoryGUI();
 		map = new Map();
 		objects.addAll(map.getEObjs());
 		objects.add(player);
@@ -790,12 +790,12 @@ public class RPGGame implements KeyListener {
 		if (keys.contains("1") && tradeOpen == true) {
 			if (JOptionPane.showConfirmDialog(null,
 					"Are you sure you want to purchase [1] ?") == JOptionPane.YES_OPTION) {
-				if (Inventory.getGold() < tP.getSlot1().getGoldCost()) {
+				if (InventoryGUI.getGold() < tP.getSlot1().getGoldCost()) {
 					JOptionPane.showMessageDialog(null, "You don't have enough gold to cover the purchase.");
-				} else if (Inventory.getItems().indexOf(tP.getSlot1()) > -1) {
+				} else if (InventoryGUI.getItems().indexOf(tP.getSlot1()) > -1) {
 					JOptionPane.showMessageDialog(null, "You already have this item in your Inventory.");
 				} else {
-					Inventory.getItems().add(tP.getSlot1());
+					InventoryGUI.getItems().add(tP.getSlot1());
 					JOptionPane.showMessageDialog(null, "[1] has been added to your Inventory.");
 					i.subtractGold(tP.getSlot1().getGoldCost());
 				}
@@ -808,12 +808,12 @@ public class RPGGame implements KeyListener {
 		else if (keys.contains("2") && tradeOpen == true) {
 			if (JOptionPane.showConfirmDialog(null,
 					"Are you sure you want to purchase [2] ?") == JOptionPane.YES_OPTION) {
-				if (Inventory.getGold() < tP.getSlot2().getGoldCost()) {
+				if (InventoryGUI.getGold() < tP.getSlot2().getGoldCost()) {
 					JOptionPane.showMessageDialog(null, "You don't have enough gold to cover the purchase.");
-				} else if (Inventory.getItems().indexOf(tP.getSlot2()) > -1) {
-					JOptionPane.showMessageDialog(null, "You already have this item in your Inventory.");
+				} else if (InventoryGUI.getItems().indexOf(tP.getSlot2()) > -1) {
+					JOptionPane.showMessageDialog(null, "You already have this item in your InventoryGUI.");
 				} else {
-					Inventory.getItems().add(tP.getSlot2());
+					InventoryGUI.getItems().add(tP.getSlot2());
 					JOptionPane.showMessageDialog(null, "[2] has been added to your Inventory.");
 					i.subtractGold(tP.getSlot2().getGoldCost());
 				}
@@ -826,12 +826,12 @@ public class RPGGame implements KeyListener {
 		else if (keys.contains("3") && tradeOpen == true) {
 			if (JOptionPane.showConfirmDialog(null,
 					"Are you sure you want to purchase [3] ?") == JOptionPane.YES_OPTION) {
-				if (Inventory.getGold() < tP.getSlot3().getGoldCost()) {
+				if (InventoryGUI.getGold() < tP.getSlot3().getGoldCost()) {
 					JOptionPane.showMessageDialog(null, "You don't have enough gold to cover the purchase.");
-				} else if (Inventory.getItems().indexOf(tP.getSlot3()) > -1) {
+				} else if (InventoryGUI.getItems().indexOf(tP.getSlot3()) > -1) {
 					JOptionPane.showMessageDialog(null, "You already have this item in your Inventory.");
 				} else {
-					Inventory.getItems().add(tP.getSlot3());
+					InventoryGUI.getItems().add(tP.getSlot3());
 					JOptionPane.showMessageDialog(null, "[3] has been added to your Inventory.");
 					i.subtractGold(tP.getSlot3().getGoldCost());
 				}
@@ -844,12 +844,12 @@ public class RPGGame implements KeyListener {
 		else if (keys.contains("4") && tradeOpen == true) {
 			if (JOptionPane.showConfirmDialog(null,
 					"Are you sure you want to purchase [4] ?") == JOptionPane.YES_OPTION) {
-				if (Inventory.getGold() < tP.getSlot4().getGoldCost()) {
+				if (InventoryGUI.getGold() < tP.getSlot4().getGoldCost()) {
 					JOptionPane.showMessageDialog(null, "You don't have enough gold to cover the purchase.");
-				} else if (Inventory.getItems().indexOf(tP.getSlot4()) > -1) {
+				} else if (InventoryGUI.getItems().indexOf(tP.getSlot4()) > -1) {
 					JOptionPane.showMessageDialog(null, "You already have this item in your Inventory.");
 				} else {
-					Inventory.getItems().add(tP.getSlot4());
+					InventoryGUI.getItems().add(tP.getSlot4());
 					JOptionPane.showMessageDialog(null, "[4] has been added to your Inventory.");
 					i.subtractGold(tP.getSlot4().getGoldCost());
 				}
@@ -862,14 +862,14 @@ public class RPGGame implements KeyListener {
 		else if (keys.contains("5") && tradeOpen == true) {
 			if (JOptionPane.showConfirmDialog(null,
 					"Are you sure you want to purchase [5] ?") == JOptionPane.YES_OPTION) {
-				if (Inventory.getGold() < tP.getSlot5().getGoldCost()) {
+				if (InventoryGUI.getGold() < tP.getSlot5().getGoldCost()) {
 					JOptionPane.showMessageDialog(null, "You don't have enough gold to cover the purchase.");
-				} else if (Inventory.getItems().indexOf(tP.getSlot5()) > -1) {
+				} else if (InventoryGUI.getItems().indexOf(tP.getSlot5()) > -1) {
 					JOptionPane.showMessageDialog(null, "You already have this item in your Inventory.");
 				} else {
-					Inventory.getItems().add(tP.getSlot5());
+					InventoryGUI.getItems().add(tP.getSlot5());
 					tP.getSlot5().activate();
-					JOptionPane.showMessageDialog(null, "[5] has been added to your Inventory.");
+					JOptionPane.showMessageDialog(null, "[5] has been added to your InventoryGUI.");
 					i.subtractGold(tP.getSlot5().getGoldCost());
 				}
 			} else {

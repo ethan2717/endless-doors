@@ -2,7 +2,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
-public class TradingPost extends GameGUI {
+public class TradingPostGUI extends GameGUI {
 
 	// instance variables for Trading Post
 	private Item slot1;
@@ -18,7 +18,7 @@ public class TradingPost extends GameGUI {
 	private String[] potions = new String[] { "blue", "green", "red", "yellow"};
 
 	// constructor #1 for Trading Post
-	public TradingPost() {
+	public TradingPostGUI() {
 		super(true, "TradingPostBckgrnd.jpg"); // uses constructor #2 from GameGUI
 		refreshItems();
 	}
@@ -67,7 +67,7 @@ public class TradingPost extends GameGUI {
 		g.setFont(new Font(FONT_NAME, 0, BODY_FONT));
 		g.drawString("Welcome to my shop, traveler.", LEFT_MARGIN, yVal);
 		yVal += 35;
-		g.drawString("You have " + Inventory.getGold() + " gold coins.", LEFT_MARGIN, yVal);
+		g.drawString("You have " + InventoryGUI.getGold() + " gold coins.", LEFT_MARGIN, yVal);
 		yVal += 35;
 		g.drawString("Type the corresponding number to purchase an item.", LEFT_MARGIN, yVal);
 		yVal += 55;

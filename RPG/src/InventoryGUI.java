@@ -3,12 +3,12 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
-public class Inventory extends GameGUI {
+public class InventoryGUI extends GameGUI {
 
 	private static int gold;
 	private static ArrayList<Item> inventory = new ArrayList<Item>();
 
-	public Inventory() {
+	public InventoryGUI() {
 		super(true, "InventoryBckgrnd.jpg");
 		gold = 0;
 		inventory.clear();
@@ -19,15 +19,15 @@ public class Inventory extends GameGUI {
 	}
 
 	public static int getGold() {
-		return Inventory.gold;
+		return InventoryGUI.gold;
 	}
 
 	public void addGold(double health) {
-		Inventory.gold += health;
+		InventoryGUI.gold += health;
 	}
 
 	public void subtractGold(int gold) {
-		Inventory.gold -= gold;
+		InventoryGUI.gold -= gold;
 	}
 
 	public double getTotalDmg() {

@@ -2,11 +2,11 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
-public class GameOver extends GameGUI {
+public class GameOverGUI extends GameGUI {
 
 	private int score;
 
-	public GameOver() {
+	public GameOverGUI() {
 		super(true, "GameOverBckgrnd.jpg");
 	}
 

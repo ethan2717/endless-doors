@@ -2,10 +2,10 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 
-public class HelpPage extends GameGUI {
+public class HelpPageGUI extends GameGUI {
 
 
-	public HelpPage() {
+	public HelpPageGUI() {
 		super(true, "HelpPageBckgrnd.jpg");
 	}
 
