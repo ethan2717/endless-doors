@@ -49,9 +49,9 @@ public class StartGame {
 				super.paintComponent(g);
 				g.setColor(new Color(0, 0, 0)); // black color
 				g.drawLine(525, 0, 525, 750);
-				g.setFont(new Font("Chelsea", 0, 50));
+				g.setFont(new Font("Alef", 0, 50));
 				g.drawString("Knight", SCREEN_WIDTH / 5 - 20, SCREEN_HEIGHT * 4 / 5);
-				g.drawString("Archer", SCREEN_WIDTH * 7 / 10 - 20, SCREEN_HEIGHT * 4 / 5);	
+				g.drawString("Archer", SCREEN_WIDTH * 7 / 10 - 20, SCREEN_HEIGHT * 4 / 5);
 				k.drawTutorial(g);
 				a.drawTutorial(g);
 			}
@@ -84,7 +84,7 @@ public class StartGame {
 				(new RPGGame()).beginGame();
 			}
 		});
-		
+
 	}
 	public void closeFrame() {
 		ticks=0;

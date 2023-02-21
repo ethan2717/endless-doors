@@ -151,7 +151,7 @@ public class RPGGame implements KeyListener {
 				}
 				g.setColor(new Color(0, 0, 0));
 				//drawHitboxes(g); // draws all hitboxes. Dev-only.
-				
+
 				for (GameObject go : objects) {// draws the health bars
 					if (go instanceof MoveableObject && go.health < go.maxHealth) {
 						g.setColor(new Color(0, 255, 0));
@@ -173,7 +173,7 @@ public class RPGGame implements KeyListener {
 					}
 				}
 				//this is for drawing damage on crates
-				/* 
+				/*
 				for (GameObject go : damagedObjects) {
 					if (!(go instanceof Enemy) && !go.getInvincibility() && go.getHealth() > 0) {
 						g.drawString("" + (int) go.getHealth(), (int) go.getCX() - 8, (int) go.getCY());
@@ -182,7 +182,7 @@ public class RPGGame implements KeyListener {
 
 				// this is where level number is drawn
 				g.setColor(Color.WHITE);
-				g.setFont(new Font("Chelsea", 0, 15));
+				g.setFont(new Font("Alef", 0, 15));
 				int lev = Map.getLevel() % 7;
 				if (lev > 5)
 					lev = 5;
