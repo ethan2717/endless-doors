@@ -811,7 +811,7 @@ public class RPGGame implements KeyListener {
 				if (InventoryGUI.getGold() < tP.getSlot2().getGoldCost()) {
 					JOptionPane.showMessageDialog(null, "You don't have enough gold to cover the purchase.");
 				} else if (InventoryGUI.getItems().indexOf(tP.getSlot2()) > -1) {
-					JOptionPane.showMessageDialog(null, "You already have this item in your InventoryGUI.");
+					JOptionPane.showMessageDialog(null, "You already have this item in your Inventory.");
 				} else {
 					InventoryGUI.getItems().add(tP.getSlot2());
 					JOptionPane.showMessageDialog(null, "[2] has been added to your Inventory.");
@@ -869,7 +869,7 @@ public class RPGGame implements KeyListener {
 				} else {
 					InventoryGUI.getItems().add(tP.getSlot5());
 					tP.getSlot5().activate();
-					JOptionPane.showMessageDialog(null, "[5] has been added to your InventoryGUI.");
+					JOptionPane.showMessageDialog(null, "[5] has been added to your Inventory.");
 					i.subtractGold(tP.getSlot5().getGoldCost());
 				}
 			} else {
