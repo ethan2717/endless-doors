@@ -47,10 +47,10 @@ public class Inventory extends GameGUI {
 		super.draw(g);
 
 		g.setColor(new Color(255, 255, 255));
-		g.setFont(new Font("Chelsea", 0, TITLE_FONT));
+		g.setFont(new Font(FONT_NAME, 0, TITLE_FONT));
 		g.drawString("INVENTORY", LEFT_MARGIN, yVal);
 
-		g.setFont(new Font("Chelsea", 0, BODY_FONT));
+		g.setFont(new Font(FONT_NAME, 0, BODY_FONT));
 		yVal += 80;
 		g.drawString("Amount of gold: " + gold, LEFT_MARGIN, yVal);
 		g.drawString("Player health: " + RPGGame.getPlayer().getHealth(), LEFT_MARGIN * 3, yVal);
@@ -73,7 +73,7 @@ public class Inventory extends GameGUI {
 			}
 		}
 
-		g.setFont(new Font("Chelsea", 0, END_FONT));
+		g.setFont(new Font(FONT_NAME, 0, END_FONT));
 		yVal += 80;
 		g.drawString("Press I to return to game.", LEFT_MARGIN, yVal);
 		yVal += 25;

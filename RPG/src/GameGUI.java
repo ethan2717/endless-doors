@@ -10,10 +10,11 @@ public abstract class GameGUI{
 	protected double locY = StartGame.SCREEN_HEIGHT * 1 / 10;
 	protected double WIDTH = StartGame.SCREEN_WIDTH * 8 / 10;
 	protected double HEIGHT = StartGame.SCREEN_HEIGHT * 8 / 10;
-	
+
 	public final static String PATH_PREFIX = "img/gui/";
 	protected BufferedImage img;
-	
+
+	public static final String FONT_NAME = "Alef";
 	public static final int TITLE_FONT = 75;
 	public static final int BODY_FONT = 25;
 	public static final int END_FONT = 18;
@@ -29,7 +30,7 @@ public abstract class GameGUI{
 	public void draw(Graphics g) {
 		g.fillRect((int)locX, (int)locY, (int)WIDTH, (int)HEIGHT);
 	}
-	
+
 	protected BufferedImage getImage(String fn) {
 		BufferedImage img = null;
 		fn = PATH_PREFIX + fn;

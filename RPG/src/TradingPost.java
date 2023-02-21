@@ -23,7 +23,7 @@ public class TradingPost extends GameGUI {
 		refreshItems();
 	}
 
-	
+
 	public void refreshItems() {
 		slot1 = new Weapon(weapons[GameObject.randInt(0, 3)]);
 		slot2 = new Weapon(weapons[GameObject.randInt(4, 8)]);
@@ -60,11 +60,11 @@ public class TradingPost extends GameGUI {
 		super.draw(g);
 
 		g.setColor(new Color(255, 255, 255));
-		g.setFont(new Font("Chelsea", 0, TITLE_FONT - 25));
+		g.setFont(new Font(FONT_NAME, 0, TITLE_FONT - 25));
 		g.drawString("TRADING POST", LEFT_MARGIN, yVal);
 		yVal += 50;
 
-		g.setFont(new Font("Chelsea", 0, BODY_FONT));
+		g.setFont(new Font(FONT_NAME, 0, BODY_FONT));
 		g.drawString("Welcome to my shop, traveler.", LEFT_MARGIN, yVal);
 		yVal += 35;
 		g.drawString("You have " + Inventory.getGold() + " gold coins.", LEFT_MARGIN, yVal);
@@ -74,44 +74,44 @@ public class TradingPost extends GameGUI {
 
 		g.drawString("[1] " + slot1, LEFT_MARGIN, yVal);
 		yVal += 25;
-		g.setFont(new Font("Chelsea", 0, END_FONT));
+		g.setFont(new Font(FONT_NAME, 0, END_FONT));
 		g.drawString("Cost: " + slot1.getGoldCost() + ", Attack damage: " + retrieveAtkDmg(slot1, RPGGame.getPlayer()), LEFT_MARGIN + LEFT_INDENT, yVal);
 		yVal += 40;
 
-		g.setFont(new Font("Chelsea", 0, BODY_FONT));
+		g.setFont(new Font(FONT_NAME, 0, BODY_FONT));
 		g.drawString("[2] " + slot2, LEFT_MARGIN, yVal);
 		yVal += 25;
-		g.setFont(new Font("Chelsea", 0, END_FONT));
+		g.setFont(new Font(FONT_NAME, 0, END_FONT));
 		g.drawString("Cost: " + slot2.getGoldCost() + ", Attack damage: " + retrieveAtkDmg(slot2, RPGGame.getPlayer()), LEFT_MARGIN + LEFT_INDENT, yVal);
 		yVal += 40;
 
-		g.setFont(new Font("Chelsea", 0, BODY_FONT));
+		g.setFont(new Font(FONT_NAME, 0, BODY_FONT));
 		g.drawString("[3] " + slot3, LEFT_MARGIN, yVal);
 		yVal += 25;
-		g.setFont(new Font("Chelsea", 0, END_FONT));
+		g.setFont(new Font(FONT_NAME, 0, END_FONT));
 		g.drawString("Cost: " + slot3.getGoldCost() + ", Attack damage: " + retrieveAtkDmg(slot3, RPGGame.getPlayer()), LEFT_MARGIN + LEFT_INDENT, yVal);
 		yVal += 40;
 
-		g.setFont(new Font("Chelsea", 0, BODY_FONT));
+		g.setFont(new Font(FONT_NAME, 0, BODY_FONT));
 		g.drawString("[4] " + slot4, LEFT_MARGIN, yVal);
 		yVal += 25;
-		g.setFont(new Font("Chelsea", 0, END_FONT));
+		g.setFont(new Font(FONT_NAME, 0, END_FONT));
 		g.drawString("Cost: " + slot4.getGoldCost() + ", Attack damage: " + retrieveAtkDmg(slot4, RPGGame.getPlayer()), LEFT_MARGIN + LEFT_INDENT, yVal);
 		yVal += 40;
 
-		g.setFont(new Font("Chelsea", 0, BODY_FONT));
+		g.setFont(new Font(FONT_NAME, 0, BODY_FONT));
 		g.drawString("[5] " + slot5, LEFT_MARGIN, yVal);
 		yVal += 25;
-		g.setFont(new Font("Chelsea", 0, END_FONT));
+		g.setFont(new Font(FONT_NAME, 0, END_FONT));
 		g.drawString("Cost: " + slot5.getGoldCost() + "  /  " + slot5.getDescription(), LEFT_MARGIN + LEFT_INDENT, yVal);
 		yVal += 40;
 
-		g.setFont(new Font("Chelsea", 0, END_FONT));
+		g.setFont(new Font(FONT_NAME, 0, END_FONT));
 		g.drawString("Press I to return to game.", LEFT_MARGIN, yVal);
 		yVal += 20;
 		g.drawString("Thanks for playing Endless Doors!", LEFT_MARGIN, yVal);
 	}
-	
+
 	private int retrieveAtkDmg(Item itm, Player player) {
 		if (player instanceof Archer) {
 			return ((Weapon) itm).getAtkDmg() / 2;
