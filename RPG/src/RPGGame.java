@@ -102,11 +102,11 @@ public class RPGGame implements KeyListener {
 	///////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void beginGame() {
-		try {
+		/*try {
 			fW = new FileWriter("record.txt");
 		} catch (IOException e1) {
 			e1.printStackTrace();
-		}
+		}*/
 		i = new InventoryGUI();
 		map = new Map();
 		objects.addAll(map.getEObjs());
